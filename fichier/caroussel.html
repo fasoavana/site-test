@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Carrousel Amélioré</title>
+    <!-- Ajout du framework Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <!DOCTYPE html>
+
+        <style>
+            /* Styles pour la page principale */
+            .container {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #f8f9fa;
+            }
+            .button {
+                display: block;
+                margin-top: 20px;
+            }
+            /* Styles pour la page affichée après le clic */
+            .sub-page {
+                display: none;
+                background-color: #fff;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Page principale</h1>
+            <a href="#" id="link">Afficher la page</a>
+            <div id="subPage" class="sub-page">
+                <h2>Contenu de la page</h2>
+                <p>Ceci est le contenu de la page.</p>
+                <button onclick="goBack()" class="button">Retour</button>
+            </div>
+        </div>
+    
+        <script>
+            // Fonction pour afficher la page après le clic sur le lien
+            document.getElementById("link").addEventListener("click", function(event) {
+                event.preventDefault(); // Empêcher le comportement par défaut du lien
+                document.getElementById("subPage").style.display = "block"; // Afficher la page
+            });
+    
+            // Fonction pour revenir à la page principale
+            function goBack() {
+                document.getElementById("subPage").style.display = "none"; // Cacher la page affichée
+            }
+        </script>
+    </body>
+    </html>
+    
+
+
+    <!-- Scripts Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
